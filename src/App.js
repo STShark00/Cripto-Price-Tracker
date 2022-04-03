@@ -16,8 +16,8 @@ function App() {
 		.then(response => {
 			setCoins(response.data);
 			console.log(response.data);
-		}).catch(error => alert(error))
-	})
+		}).catch(error => console.log(error))
+	}, [])
 
 
 	const handleChange = e => {
@@ -31,7 +31,7 @@ function App() {
   return (
     <div className='coin-app'>
 		<div className='coin-search'>
-			<h1 className='coin-text'>Search a vs_currency</h1>
+			<h1 className='coin-text'>Search for Cryptocurrency</h1>
 			<form>
 				<input type='text' placeholder='Search' className='coin-input' onChange={handleChange}/>
 			</form>
