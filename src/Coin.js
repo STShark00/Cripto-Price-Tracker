@@ -15,7 +15,7 @@ const coin = ({name, image, symbol, price, volume, priceChange, marketCap}) => {
                 {priceChange < 0 ? (
                     <p className='price-neg-change'>{priceChange.toFixed(2)}%</p>
                 ) : (
-                    <p className='price-pos-change'>{priceChange.toFixed(2)}%</p>
+                    <p className='price-pos-change'>+{priceChange.toFixed(2)}%</p>
                 )}
                 <p className='coin-volume'>${volume.toLocaleString()}</p>
                 
